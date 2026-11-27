@@ -1,0 +1,56 @@
+:root{color-scheme:light;--ink:#172722;--muted:#52645c;--line:#d9e2dc;--green:#174d38;--lime:#d8f484;--paper:#f3f6f1}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Hiragino Sans","Thonburi","Leelawadee UI",sans-serif;font-size:1rem}
+button,input,select,textarea{font:inherit;color:inherit}
+button,input,select,textarea{border:1px solid var(--line);border-radius:8px;background:white;padding:.65rem .85rem}
+button{cursor:pointer;font-weight:700}
+button:disabled{opacity:.55;cursor:default}
+button:hover:not(:disabled){border-color:var(--green)}
+:focus-visible{outline:3px solid #589873;outline-offset:2px}
+h1,h2,p{margin-top:0}
+h1{font-size:clamp(1.65rem,4vw,2.55rem);margin-bottom:0;letter-spacing:-.045em}
+h2{font-size:1.4rem}
+.shell{min-height:100vh;display:grid;grid-template-columns:220px minmax(0,1fr)}
+aside{background:#132820;color:#f0f8ef;padding:1.8rem 1.15rem;display:flex;flex-direction:column;gap:2rem}
+.brand{display:block;font-family:ui-monospace,monospace;font-weight:900;letter-spacing:-.08em;font-size:1.75rem;line-height:1}
+.brand span{color:#9cc65a}
+nav{display:grid;gap:.4rem}
+aside button{color:inherit;background:transparent;border-color:transparent;text-align:left}
+nav button[aria-current]{background:var(--lime);color:#172722}
+nav button:hover:not([aria-current]),.account button:hover{background:#274033}
+.account{margin-top:auto;display:grid;gap:.5rem;padding-top:1rem;border-top:1px solid #476151;overflow-wrap:anywhere}
+.account button{padding-left:0;font-size:.9rem}
+.content{padding:clamp(1rem,4vw,3.5rem);width:100%;max-width:1500px}
+header{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1.5rem}
+.primary{background:var(--green);color:white;border-color:var(--green)}
+.primary:hover:not(:disabled){background:#226249}
+.panel,.login-card{background:white;border:1px solid var(--line);border-radius:12px}
+.filters{display:flex;gap:.65rem;flex-wrap:wrap;padding:1rem}
+.filters input{flex:1 1 230px}
+.table-scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;text-align:left;white-space:nowrap}
+th,td{padding:.9rem 1rem;border-top:1px solid var(--line)}
+th{background:#e9f0e9;color:#344b3f;font-size:.9rem}
+td:last-child{white-space:normal}
+tbody tr:nth-child(even){background:#f9fbf8}
+.empty{text-align:center;color:var(--muted);padding:2.5rem 1rem;margin:0}
+.mono{font-family:ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.quantity{font-weight:800}
+.tag{display:inline-block;background:#e9f3de;border-radius:5px;padding:.2rem .45rem}
+.positive{color:#1b6346}.negative{color:#9c332a}
+.subtle{background:#f6faf4}
+.notice,.error{padding:.7rem .85rem;border-radius:8px;overflow-wrap:anywhere}
+.notice{background:#e6f2dc;color:#204c2f}
+.error{background:#fbe9e7;color:#842b23}
+footer{display:flex;align-items:center;justify-content:flex-end;gap:.7rem;padding:1rem}
+dialog{border:1px solid var(--line);border-radius:14px;padding:1.4rem;width:min(480px,calc(100% - 2rem));max-height:90vh;color:var(--ink)}
+dialog::backdrop{background:#102319af}
+dialog footer{padding:0;margin-top:.4rem}
+form{display:grid;gap:.85rem}
+form label{display:grid;gap:.35rem;font-weight:700}
+form p,form h2{margin-bottom:0}
+.login{min-height:100vh;display:grid;place-items:center;padding:1rem;background:linear-gradient(145deg,#132820,#244d38)}
+.login>p{color:white}
+.login-card{width:min(100%,420px);padding:clamp(1.2rem,5vw,2.5rem);gap:1rem}
+.login-card h1{font-size:1.7rem;margin:.4rem 0}
+@media(max-width:720px){.shell{display:block}aside{gap:.7rem;padding:1rem}nav{display:flex;flex-wrap:wrap}.account{display:flex;align-items:center;justify-content:space-between;padding-top:.45rem}.content{padding:1rem}header{align-items:flex-start}.filters select{flex:1}.brand{font-size:1.4rem}}
